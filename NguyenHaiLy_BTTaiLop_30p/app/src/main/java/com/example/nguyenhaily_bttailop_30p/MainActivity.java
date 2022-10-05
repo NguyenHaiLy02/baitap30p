@@ -24,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("dataLogin",MODE_PRIVATE);
        Anhxa();
-
+       username.setText(sharedPreferences.getString("taikhoan",""));
+        pass.setText(sharedPreferences.getString("matkhau",""));
+        luumk.setChecked(sharedPreferences.getBoolean("checked",false));
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
